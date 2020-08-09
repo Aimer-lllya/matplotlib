@@ -7,8 +7,11 @@ while True:
     rw = RandomWalk(50000)
     rw.fill_walk()
 
+    # 设置绘图窗口的尺寸
+    plt.figure(figsize = (10,6))
+
     point_numbers = list(range(rw.num_point))
-    plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolor='none', s=15)
+    plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolor='none', s=1)
 
     # 突出起点和终点
     plt.scatter(0, 0, c='green', edgecolors='none', s=100)
